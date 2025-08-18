@@ -19,7 +19,12 @@ const auth = () => {
         if(auth.isAuthenticated){
             navigate(next);
         }
-    }, [auth.isAuthenticated, next])
+    }, [auth.isAuthenticated, next]);
+
+    const handleLogout = async () => {
+        await auth.signOut();
+        navigate("/auth?next=/")
+    }
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen flex items-center justify-center">
         <div className="gradient-border shadow-lg">
@@ -36,7 +41,7 @@ const auth = () => {
                     ) : (
                         <>
                             {auth.isAuthenticated ? (
-                                <button className="auth-button" onClick={auth.signOut}>
+                                <button className="auth-button" onClick={handleLogout}>
                                     <p>Log Out</p>
                                 </button>
                             ): (
