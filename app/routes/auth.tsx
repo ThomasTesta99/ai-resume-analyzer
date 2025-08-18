@@ -35,9 +35,8 @@ const auth = () => {
                 <div className='flex flex-col items-center gap-2 text-center'>
                     {auth.isAuthenticated ? (
                         <>
-                            <h1>Welcome Back</h1>
                             <h2>You are currently logged in.</h2>
-                            <button className="auth-button mb-3" onClick={homepage}>
+                            <button className="auth-button mt-8" onClick={homepage}>
                                 <p>Homepage</p>
                             </button>
                         </>
