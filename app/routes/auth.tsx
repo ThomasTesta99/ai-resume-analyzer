@@ -25,6 +25,9 @@ const auth = () => {
         await auth.signOut();
         navigate("/auth?next=/")
     }
+    const homepage = () => {
+        navigate("/")
+    }
   return (
     <main className="bg-[url('/images/bg-main.svg')] bg-cover min-h-screen flex items-center justify-center">
         <div className="gradient-border shadow-lg">
@@ -34,6 +37,9 @@ const auth = () => {
                         <>
                             <h1>Welcome Back</h1>
                             <h2>You are currently logged in.</h2>
+                            <button className="auth-button mb-3" onClick={homepage}>
+                                <p>Homepage</p>
+                            </button>
                         </>
                     ): (
                         <>
