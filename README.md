@@ -1,7 +1,4 @@
 
----
-
-```md
 # Resumind 📄🤖  
 _AI-powered resume analyzer for job seekers_
 
